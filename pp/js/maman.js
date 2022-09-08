@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 document.getElementById("container").style.backgroundColor = "#fdc9ae";
                 break
             case scrollTop < 10450:
-                document.getElementById("container").style.backgroundColor = "#fcf7ef";
+                document.getElementById("container").style.backgroundColor = "transparent";
                 break
             case scrollTop < 16980:
                 document.getElementById("container").style.backgroundColor = "#ded6c8";
