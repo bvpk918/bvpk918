@@ -516,8 +516,169 @@ body{
 
 
 #section04{
-    background: hotpink;
+    /*background: hotpink;*/
+    height: 1140px;
+    background-image: url("../img/maman/section04/bg_pic.jpg");
+    position: relative;
 }
+
+#section04 .out_box{
+    width: 1760px;
+    /*height: 2040px;*/
+    padding-left: 160px;
+    /*background-color: #fff;*/
+    position: relative;
+
+}
+
+#section04 .title_bg{
+    position: absolute;
+    right: 10px;
+    top: 102px;
+    z-index: 10;
+    opacity: 0.03;
+}
+
+#section04 .title_outbox{
+    /*position: absolute;*/
+
+}
+
+#section04 .title_box{
+    width: 401px;
+    height: 166px;
+    background-color: blue;
+    padding-top: 120px;
+}
+
+#section04 .title_box .title_desc{
+    padding-top: 40px;
+}
+
+#section04 .main_desc{
+    padding-top: 54px;
+    padding-left: 79px;
+    position: relative;
+}
+
+#section04 .main_desc > img{
+    /*cursor: not-allowed;*/
+    pointer-events: none;
+    z-index: 4;
+    position: absolute;
+    left: 79px;
+    top: 54px;
+}
+
+#section04 .babytime{
+    background-color: #dedede;
+    opacity: 0.7;
+    position: absolute;
+    left: 544px;
+    top: 0;
+}
+#section04 .momdle{
+    background-color: #c5c5c5;
+    opacity: 0.6;
+    position: absolute;
+    left: 967px;
+    top: 0;
+}
+#section04 .crying{
+    background-color: #bbbaba;
+    opacity: 0.7;
+    position: absolute;
+    left: 1390px;
+    top: 0;
+}
+
+#section04 .hvr_box{
+    width: 424px;
+    height: 1140px;
+    transform: skew(-10.4deg);
+    z-index: 3;
+}
+
+
+#section04 .hvr_img{
+    width: 424px;
+    height: 1140px;
+    transform: skew(-10.4deg);
+    /*background-color: #e0e3ef;*/
+    /*position: absolute;*/
+    /*left: 544px;*/
+    /*top: 0;*/
+    opacity: 0;
+    z-index: 1;
+}
+
+#section04 .babytime_color{
+    background-color: #e0e3ef;
+    position: absolute;
+    left: 544px;
+    top: 0;
+}
+
+
+#section04 .momdle_color{
+    background-color: #fdf0d9;
+    position: absolute;
+    left: 967px;
+    top: 0;
+}
+
+
+#section04 .crying_color{
+    background-color: #ffe4ed;
+    position: absolute;
+    left: 1390px;
+    top: 0;
+}
+
+#section04 .hvr_img >img{
+    transform: skew(10.4deg);
+}
+
+#section04 .babytime_color > img{
+    margin-left: -34px;
+    padding-top: 340px;
+}
+
+#section04 .momdle_color > img{
+    margin-left: -29px;
+    padding-top: 343px;
+}
+
+#section04 .crying_color > img{
+    margin-left: -32px;
+    padding-top: 344px;
+}
+
+#section04 .babytime:hover + .hvr_img{
+    opacity: 1;
+    z-index: 5;
+}
+
+#section04 .momdle:hover + .hvr_img{
+    opacity: 1;
+    z-index: 5;
+}
+
+#section04 .crying:hover + .hvr_img{
+    opacity: 1;
+    z-index: 5;
+}
+
+#section04 .hvr_img:hover{
+    z-index: 5;
+    opacity: 1;
+}
+
+
+
+
+
+
 
 
 
