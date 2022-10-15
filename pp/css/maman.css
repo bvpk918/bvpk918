@@ -535,6 +535,7 @@ body{
     position: absolute;
     right: 10px;
     top: 102px;
+    color: #131313;
     z-index: 10;
     opacity: 0.03;
 }
@@ -547,12 +548,15 @@ body{
 #section04 .title_box{
     width: 401px;
     height: 166px;
-    background-color: blue;
+    /*background-color: blue;*/
     padding-top: 120px;
 }
-
+#section04 .title_box .title{
+    color: #333333;
+}
 #section04 .title_box .title_desc{
     padding-top: 40px;
+    color: #4c4b4b;
 }
 
 #section04 .main_desc{
@@ -568,6 +572,34 @@ body{
     position: absolute;
     left: 79px;
     top: 54px;
+}
+
+#section04 .main_desc .underbar_outbox{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    pointer-events: none;
+}
+
+#section04 .underbar_outbox .underbar{
+    /*width: 1664px;*/
+    border-bottom: #4b4b4b 3px solid;
+    opacity: 0.15;
+
+}
+
+#section04 .underbar_outbox .underbar:nth-child(1){
+    width: 1662px;
+    height: 237px;
+}
+#section04 .underbar_outbox .underbar:nth-child(2){
+    width: 1638px;
+    height: 131px;
+}
+#section04 .underbar_outbox .underbar:nth-child(3){
+    width: 1602px;
+    height: 191px;
 }
 
 #section04 .babytime{
