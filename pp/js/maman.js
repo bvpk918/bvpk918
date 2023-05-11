@@ -1,6 +1,13 @@
 window.addEventListener('DOMContentLoaded', function () {
 
 
+    setTimeout(()=>{
+        $('.top_outbox').addClass('on');
+    },800)
+
+
+
+    
 
     /* scroll event section */
     container.addListener((e) => {
@@ -8,29 +15,54 @@ window.addEventListener('DOMContentLoaded', function () {
         let scrollTop = container.scrollTop;
         $('.posNum').html(scrollTop)
 
+        let thanksElement = document.getElementById("thanks4wtch")
+        let containerElement = document.getElementById('container')
+        
+    
+
 
         switch (true) {
             case scrollTop < 670:
-                document.getElementById('container').style.backgroundColor= 'transparent';
+                containerElement.style.background= 'transparent';
                 break
             case scrollTop < 3900:
-                document.getElementById("container").style.backgroundColor = "#fae980";
+                containerElement.style.background = "#fae980";
                 break
             case scrollTop < 9510:
-                document.getElementById("container").style.backgroundColor = "#fdc9ae";
+                containerElement.style.background = "#fdc9ae";
                 break
             case scrollTop < 10450:
-                document.getElementById("container").style.backgroundColor = "transparent";
+                containerElement.style.background = "transparent";
                 break
             case scrollTop < 16980:
-                document.getElementById("container").style.backgroundColor = "#ded6c8";
+                containerElement.style.background = "#ded6c8";
                 break
             case scrollTop < 18100:
-                document.getElementById("container").style.backgroundColor = "#000000";
+                containerElement.style.background = "#000000";
                 break
-            case scrollTop < 27000:
-                document.getElementById("container").style.backgroundColor = "#ecc6bf";
+            // case scrollTop < 27000:
+            //     document.getElementById("container").style.backgroundColor = "#ecc6bf";
+            //     break
+            case scrollTop < 24200:
+                document.getElementById("container").style.backgroundColor = "#fbfae0";
+                thanksElement.style.color = "#2d2d2d";
+                // document.getElementById("thanks4wtch").classList.add('on')
+                thanksElement.classList.remove('on')
+                document.getElementById("footer").classList.remove('on')
                 break
+            // case scrollTop < 24050:
+                
+            //     break
+            case scrollTop < 25050:
+                // const thanks4Element = this.document.getElementById("thanks4wtch")
+                document.getElementById("container").style.backgroundColor = "#0a0a0a";
+                thanksElement.style.color = "#dfdfe1";
+                thanksElement.classList.add('on')
+                document.getElementById("footer").classList.add('on')
+                // this.document.getElementById("thanks4wtch").classList.remove('on')
+                break
+
+
             // case scrollTop < 7900:
             //     document.getElementById("container").style.backgroundColor = "#ecc6bf";
             //     break
@@ -39,10 +71,58 @@ window.addEventListener('DOMContentLoaded', function () {
             //     break
         }
         
+
+        if( scrollTop >= 600 ){
+            $('.white_bg').addClass('on');
+        }
         
+        if( scrollTop >= 670 ){
+            $('.section_pagination').addClass('on');
+        }
+
+        if( scrollTop >= 2808 ){
+            $('#section03 .bottom').addClass('on');
+        }
+        
+        if( scrollTop >= 3750 ){
+            $('#section04').addClass('on');
+        }
 
 
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        if( scrollTop >= 15500 ){
+            $('#section12').addClass('on');
+        }
+
+        // if( scrollTop >= 24050 ){
+        //     $('#thanks4wtch').addClass('on');
+        // }
+
+
+
+
+
+
+
+
+
+
 
         // $(document).ready(function() {
         //     var bodyOffset = $('body').offset();
@@ -102,10 +182,19 @@ window.addEventListener('DOMContentLoaded', function () {
 //   }
 // })
         
-        
 
 
+    
 
+// (function () {
+
+
+//     setTimeout(()=>{
+//         $('.top_outbox').addClass('on');
+//     },1000)
+
+
+// })
 
 
 
@@ -114,6 +203,14 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
     });
+
+    
+
+
+
+
+
+
 
 
 
@@ -127,7 +224,7 @@ window.addEventListener('DOMContentLoaded', function () {
         //     delay: 5000,
         //     disableOnInteraction: false
         // },
-        spaceBetween: 0,
+        spaceBetween: -1,
         slidesPerView: '2.3',
         centeredSlides: true,
         speed:1000,
@@ -215,6 +312,20 @@ window.addEventListener('DOMContentLoaded', function () {
     //         swp.autoplay.start();
     //     });
     // });
+
+
+
+
+
+// (function () {
+
+
+//     setTimeout(()=>{
+//         $('.top_outbox').addClass('on');
+//     },1000)
+
+
+// })
 
 
 
