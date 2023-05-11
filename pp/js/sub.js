@@ -25,6 +25,9 @@ window.addEventListener('DOMContentLoaded', function () {
         let scrollTop = container.scrollTop;
         $('.posNum').html(scrollTop)
 
+        let thanksElement = document.getElementById("thanks4wtch")
+        let containerElement = document.getElementById('container')
+
         switch (true) {
             case scrollTop < 670:
                 document.getElementById("container").style.backgroundColor = "#ebf0f0";
@@ -44,15 +47,22 @@ window.addEventListener('DOMContentLoaded', function () {
             case scrollTop < 18100:
                 document.getElementById("container").style.backgroundColor = "#000000";
                 break
-            case scrollTop < 27000:
+            // case scrollTop < 27000:
+            //     document.getElementById("container").style.backgroundColor = "#ecc6bf";
+            //     break
+            case scrollTop < 22100:
                 document.getElementById("container").style.backgroundColor = "#ecc6bf";
+                thanksElement.style.color = "#2d2d2d";
+                thanksElement.classList.remove('on')
+                document.getElementById("footer").classList.remove('on')
                 break
-            // case scrollTop < 7900:
-            //     document.getElementById("container").style.backgroundColor = "#ecc6bf";
-            //     break
-            // case scrollTop < 7900:
-            //     document.getElementById("container").style.backgroundColor = "#ecc6bf";
-            //     break
+
+            case scrollTop < 25050:
+                document.getElementById("container").style.backgroundColor = "#0a0a0a";
+                thanksElement.style.color = "#dfdfe1";
+                thanksElement.classList.add('on')
+                document.getElementById("footer").classList.add('on')
+                break
         }
 
 
@@ -83,7 +93,7 @@ window.addEventListener('DOMContentLoaded', function () {
         //     delay: 5000,
         //     disableOnInteraction: false
         // },
-        spaceBetween: 0,
+        spaceBetween: -1,
         slidesPerView: '2.3',
         centeredSlides: true,
         speed:1000,

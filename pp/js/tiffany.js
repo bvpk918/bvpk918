@@ -25,6 +25,9 @@ window.addEventListener('DOMContentLoaded', function () {
         let scrollTop = container.scrollTop;
         $('.posNum').html(scrollTop)
 
+        let thanksElement = document.getElementById("thanks4wtch")
+        let containerElement = document.getElementById('container')
+
         switch (true) {
             case scrollTop < 630:
                 document.getElementById("container").style.backgroundColor = "#ffffff";
@@ -38,10 +41,24 @@ window.addEventListener('DOMContentLoaded', function () {
             case scrollTop < 11800:
                 document.getElementById("container").style.backgroundColor = "#161818";
                 break
-            case scrollTop < 16980:
+            // case scrollTop < 16980:
+            //     document.getElementById("container").style.backgroundColor = "#F3F0EC";
+            //     break
+
+
+            case scrollTop < 14130:
                 document.getElementById("container").style.backgroundColor = "#F3F0EC";
+                thanksElement.style.color = "#2d2d2d";
+                thanksElement.classList.remove('on')
+                document.getElementById("footer").classList.remove('on')
                 break
 
+            case scrollTop < 25050:
+                document.getElementById("container").style.backgroundColor = "#0a0a0a";
+                thanksElement.style.color = "#dfdfe1";
+                thanksElement.classList.add('on')
+                document.getElementById("footer").classList.add('on')
+                break
         }
 
 
@@ -72,7 +89,7 @@ window.addEventListener('DOMContentLoaded', function () {
         //     delay: 5000,
         //     disableOnInteraction: false
         // },
-        spaceBetween: 0,
+        spaceBetween: -1,
         slidesPerView: '2.3',
         centeredSlides: true,
         speed:1000,

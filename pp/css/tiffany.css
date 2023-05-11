@@ -1108,14 +1108,32 @@
 /*-START.--THANKS4WTCH*/
 #thanks4wtch{
     height: 1100px;
-    background: #f3f0ec;
+    /* background: #f3f0ec; */
+    background-color: transparent;
+    transition: 0.2s;
+    position: relative;
 }
+
+
+#thanks4wtch .noise{
+    padding-top: 270px;
+    opacity: 0;
+}
+#thanks4wtch.on .noise{
+    opacity: 0.14;
+    animation: noise 0.3s infinite;
+}
+
 .thanks_outbox{
     width: 1600px;
     height: 700px;
     margin: 0 auto;
     padding-top: 185px;
-    position: relative;
+    /* position: relative; */
+    position: absolute;
+    left: 160px;
+    top: 0;
+    z-index: 12;
 }
 
 .thanks_outbox .big_thanks{
@@ -1124,6 +1142,11 @@
     border-top-width: 2px;
     border-top-color: #151616;
 }
+
+#thanks4wtch.on .thanks_outbox .big_thanks{
+    border-top-color: #dfdfe1;
+}
+
 
 .big_thanks .left,
 .big_thanks .right{
@@ -1134,7 +1157,7 @@
     font-size: 11.25em;
     font-weight: 100;
     letter-spacing: -0.04em;
-    color: #2d2d2d;
+    /* color: #2d2d2d; */
     -webkit-font-smoothing: antialiased;
 }
 
@@ -1149,7 +1172,7 @@
     font-size: 1.6875em;
     font-weight: 300;
     letter-spacing: 0.04em;
-    color: #2d2d2d;
+    /* color: #2d2d2d; */
     -webkit-font-smoothing: antialiased;
 }
 
@@ -1173,7 +1196,7 @@
     font-size: 0.875em;
     font-weight: 200;
     letter-spacing: 0.04em;
-    color: #2d2d2d;
+    /* color: #2d2d2d; */
     -webkit-font-smoothing: antialiased;
 }
 .thanks_outbox .project .thanks_desc .desc{
@@ -1182,7 +1205,7 @@
     font-size: 1.25em;
     font-weight: 300;
     letter-spacing: 0.04em;
-    color: #2d2d2d;
+    /* color: #2d2d2d; */
     -webkit-font-smoothing: antialiased;
 }
 
@@ -1218,7 +1241,7 @@
 
 
 #footer{
-    background-color: #0a0a0a;
+    /* background-color: #0a0a0a; */
     /*height: 960px;*/
     height: 100vh;
     width: 100vw;
@@ -1238,14 +1261,21 @@
     height: 200vh;
     background: transparent url("../img/index/noise.png") repeat 0 0;
     /*background-repeat: no-repeat;*/
-    animation: noise 0.3s infinite;
-    opacity: 0.14;
-    /*opacity: 1;*/
+
+    /* opacity: 0.14; */
+    opacity: 0;
     visibility: visible;
     pointer-events: none;
     z-index: 11;
 
 }
+
+
+#footer.on .noise{
+    opacity: 0.14;
+    animation: noise 0.3s infinite;
+}
+
 
 @keyframes noise{
     0% {transform: translate(0,0);}
@@ -1268,13 +1298,35 @@
     top: 0;
     z-index: 12;
     /*background-color: darkred;*/
+    opacity: 0;
+    transition: 0.2s;
+}
+
+#footer.on .footer_outbox{
+    opacity: 1;
 }
 
 
 #footer .next_page_title{
     padding-top: 75px;
     padding-left: 160px;
+    width: 401px;
+    height: 45px;
+    overflow: hidden;
 }
+
+
+#footer .next_page_title > img{
+    transform: translateY(60px);
+    transition: 0.8s;
+}
+
+
+#footer.on .next_page_title > img{
+    transform: translateY(0);
+}
+
+
 
 #footer .back2main{
     margin: 0 auto;
@@ -1285,6 +1337,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 #footer .back2main .b2m_outbox{
@@ -1296,7 +1349,17 @@
     align-items: start;
     /*background-color: plum;*/
     position: relative;
+    transform: translateY(130px);
+    transition: 0.8s;
+    opacity: 0;
 }
+
+#footer.on .back2main .b2m_outbox{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
 
 #footer .back2main .b2m_outbox .back{
     /*display: flex;*/
@@ -1315,13 +1378,15 @@
 
     opacity: 1;
     font-size: 14.06375em;
-    letter-spacing: -0.02em;
+    /* letter-spacing: -0.02em; */
     transform:scale(0.75,1.0);
     font-stretch: condensed;
     -webkit-font-smoothing: antialiased;
-    color: transparent;
+    /* color: transparent; */
     -webkit-text-stroke: 2px white;
-    transition: 1.5s;
+    /* transition: 1.5s; */
+    transition: 0.45s;
+    color: white;
 }
 
 /*#footer .back2main .b2m_outbox:hover .back .ba{*/
@@ -1329,6 +1394,14 @@
 /*    -webkit-text-stroke: unset;*/
 /*    transition: 0.45s;*/
 /*}*/
+
+#footer .back2main .b2m_outbox:hover .back .ba{
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    /* transition: 0.45s; */
+    transition: 1.5s;
+}
+
 
 #footer .back2main .b2m_outbox .back .ck{
     position: absolute;
@@ -1338,18 +1411,33 @@
     font-weight: 200;
     opacity: 1;
     font-size: 14.06375em;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
     -webkit-font-smoothing: antialiased;
+    /* color: transparent; */
+    -webkit-text-stroke: 1px white;
+    /* transition: 1.5s; */
+
+    transition: 0.45s;
+    color: white;
+   /* -webkit-text-stroke: unset; */
+}
+
+
+/* 
+#footer .back2main .b2m_outbox:hover .back .ck{
+   color: white;
+   -webkit-text-stroke: unset;
+   transition: 0.45s;
+} */
+
+#footer .back2main .b2m_outbox:hover .back .ck{
     color: transparent;
-    -webkit-text-stroke: 2px white;
+    -webkit-text-stroke: 1px white;
+    /* transition: 0.45s; */
     transition: 1.5s;
 }
 
-/*#footer .back2main .b2m_outbox:hover .back .ck{*/
-/*    color: white;*/
-/*    -webkit-text-stroke: unset;*/
-/*    transition: 0.45s;*/
-/*}*/
+
 
 #footer .back2main .b2m_outbox .to{
 
@@ -1365,9 +1453,11 @@
     font-size: 14.06375em;
     letter-spacing: -0.02em;
     -webkit-font-smoothing: antialiased;
-    color: transparent;
-    -webkit-text-stroke: 2px white;
-    transition: 1.5s;
+    /* color: transparent; */
+    color: white;
+    -webkit-text-stroke: 1px white;
+    /* transition: 1.5s; */
+    transition: 0.45s;
 }
 
 /*#footer .back2main .b2m_outbox:hover .to .t{*/
@@ -1376,10 +1466,19 @@
 /*    transition: 0.45s;*/
 /*}*/
 
+
+#footer .back2main .b2m_outbox:hover .to .t{
+        color: transparent;
+        -webkit-text-stroke: 1px white;
+        /* transition: 0.45s; */
+        transition: 1.5s;
+}
+
+
 #footer .back2main .b2m_outbox .to .o{
     position: absolute;
     left: 800px;
-    top: 17px;
+    top: 3px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1483,7 +1582,7 @@
     font-family: 'magic', serif;
     font-weight: 200;
     color: transparent;
-    -webkit-text-stroke: 2px white;
+    -webkit-text-stroke: 1px white;
     opacity: 1;
     font-size: 14.06375em;
     letter-spacing: -0.02em;
@@ -1509,7 +1608,7 @@
     transform:scale(0.75,1.0);
     font-stretch: condensed;
     -webkit-font-smoothing: antialiased;
-    -webkit-text-stroke: 2px white;
+    -webkit-text-stroke: 1px white;
     transition: 1.5s;
 }
 
