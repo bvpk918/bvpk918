@@ -2539,14 +2539,17 @@ transition: all 1s cubic-bezier(0.07, 0.55, 0.21, 1.02); */
     position: relative;
     left: 44px;
     top: 29px;
-    width: 396px;
-    height: 891px;
+    width: 395px;
+    height: 858px;
     /* background-color: black; */
 }
 
 #section13 .outbox .video #home{
-    width: 100.1%;
-    height: 100.1%;
+    position:absolute;
+    top: 19px;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 #section13 .outbox .mockup{
@@ -2554,7 +2557,7 @@ transition: all 1s cubic-bezier(0.07, 0.55, 0.21, 1.02); */
     width: 100%;
     height: 100%;
     left: 0;
-    top: 0;
+    top: 1px;
 }
 
 #section13 .outbox .mockup > img{
