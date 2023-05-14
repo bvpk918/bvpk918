@@ -1330,7 +1330,7 @@
 
 #footer .back2main{
     margin: 0 auto;
-    width: 100vw;
+    width: 1600px;
     height: 168px;
     /* padding-top: 225px; */
     /*background-color: mediumvioletred;*/
@@ -1352,7 +1352,7 @@
     align-items: start;
     /*background-color: plum;*/
     position: absolute;
-    left: 160px;
+    left: 0;
     top: 0;
     transform: translateY(130px);
     transition: 0.8s;
