@@ -54,7 +54,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
 
-            case scrollTop < 24500:
+            case scrollTop < 24700:
                 document.getElementById("container").style.backgroundColor = "#transparent";
                 thanksElement.style.color = "#2d2d2d";
                 thanksElement.classList.remove('on')
@@ -63,7 +63,7 @@ window.addEventListener('DOMContentLoaded', function () {
             // case scrollTop < 24050:
                 
             //     break
-            case scrollTop < 25050:
+            case scrollTop < 26000:
                 // const thanks4Element = this.document.getElementById("thanks4wtch")
                 // document.getElementById("container").style.backgroundColor = "#0a0a0a";
                 thanksElement.style.color = "#dfdfe1";
@@ -90,7 +90,7 @@ window.addEventListener('DOMContentLoaded', function () {
             $('.section_pagination').addClass('on');
         }
 
-        if( scrollTop >= 2808 ){
+        if( scrollTop >= 2850 ){
             $('#section03 .bottom').addClass('on');
         }
         

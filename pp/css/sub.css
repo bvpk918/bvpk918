@@ -490,17 +490,23 @@
 
 #section04{
     /*background: hotpink;*/
-
-}
-
-#section04 .fixed_bg_img01{
     height: 1070px;
-    width: 100%;
+    width: 100vw;
     background-image: url('../img/sub/fixed_img01.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+
+#section04 .fixed_bg_img01{
+    /* height: 1070px;
+    width: 100%;
+    background-image: url('../img/sub/fixed_img01.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; */
 
 }
 
