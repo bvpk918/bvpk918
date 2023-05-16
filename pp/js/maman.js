@@ -39,14 +39,24 @@ window.addEventListener('DOMContentLoaded', function () {
                 break
             case scrollTop < 18100:
                 containerElement.style.background = "#000000";
+                this.document.getElementById('body').classList.remove('on')
                 break
-            // case scrollTop < 27000:
-            //     document.getElementById("container").style.backgroundColor = "#ecc6bf";
-            //     break
-            case scrollTop < 24200:
-                document.getElementById("container").style.backgroundColor = "#fbfae0";
+
+
+
+
+            case scrollTop < 20000:
+                containerElement.style.background = "transparent";
+                this.document.getElementById('body').classList.add('on')
+                break
+
+
+
+
+
+            case scrollTop < 24500:
+                document.getElementById("container").style.backgroundColor = "#transparent";
                 thanksElement.style.color = "#2d2d2d";
-                // document.getElementById("thanks4wtch").classList.add('on')
                 thanksElement.classList.remove('on')
                 document.getElementById("footer").classList.remove('on')
                 break
@@ -55,7 +65,7 @@ window.addEventListener('DOMContentLoaded', function () {
             //     break
             case scrollTop < 25050:
                 // const thanks4Element = this.document.getElementById("thanks4wtch")
-                document.getElementById("container").style.backgroundColor = "#0a0a0a";
+                // document.getElementById("container").style.backgroundColor = "#0a0a0a";
                 thanksElement.style.color = "#dfdfe1";
                 thanksElement.classList.add('on')
                 document.getElementById("footer").classList.add('on')
@@ -88,6 +98,12 @@ window.addEventListener('DOMContentLoaded', function () {
             $('#section04').addClass('on');
         }
 
+
+
+
+        if( scrollTop >= 23070 ){
+            // $('body').addClass('on');
+        }
 
 
 
