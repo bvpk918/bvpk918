@@ -31,21 +31,29 @@ window.addEventListener('DOMContentLoaded', function () {
         switch (true) {
             case scrollTop < 670:
                 document.getElementById("container").style.backgroundColor = "#ebf0f0";
+                this.document.getElementById("section02").classList.remove('on')
                 break
+
+            case scrollTop < 3600:
+                document.getElementById("container").style.backgroundColor = "transparent";
+                this.document.getElementById("section02").classList.add('on')
+                break
+
             case scrollTop < 3900:
-                document.getElementById("container").style.backgroundColor = "#c4d8da";
+                // document.getElementById("container").style.backgroundColor = "#c4d8da";
                 break
             case scrollTop < 9510:
-                document.getElementById("container").style.backgroundColor = "#fdc9ae";
+                // document.getElementById("container").style.backgroundColor = "#fdc9ae";
                 break
             case scrollTop < 10450:
-                document.getElementById("container").style.backgroundColor = "#fcf7ef";
+                // document.getElementById("container").style.backgroundColor = "#fcf7ef";
                 break
             case scrollTop < 16980:
-                document.getElementById("container").style.backgroundColor = "#ded6c8";
+                // document.getElementById("container").style.backgroundColor = "#ded6c8";
                 break
             case scrollTop < 18100:
-                document.getElementById("container").style.backgroundColor = "#000000";
+                // document.getElementById("container").style.backgroundColor = "#000000";
+                document.getElementById("container").style.backgroundColor = "transparent";
                 break
             // case scrollTop < 27000:
             //     document.getElementById("container").style.backgroundColor = "#ecc6bf";
@@ -55,6 +63,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 thanksElement.style.color = "#2d2d2d";
                 thanksElement.classList.remove('on')
                 document.getElementById("footer").classList.remove('on')
+                document.getElementById("section10").classList.remove('on')
                 break
 
             case scrollTop < 25050:
@@ -62,6 +71,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 thanksElement.style.color = "#dfdfe1";
                 thanksElement.classList.add('on')
                 document.getElementById("footer").classList.add('on')
+                document.getElementById("section10").classList.add('on')
                 break
         }
 
