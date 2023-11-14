@@ -1,22 +1,24 @@
 window.addEventListener('DOMContentLoaded', function () {
 
-    let cursor = $('#cursor');
+    //--------------moving button cursor setting start-------------------
+    // let cursor = $('#cursor');
 
 
-    $(document).mousemove(function(e){
-        let cursorWidth = cursor.width() / 2;
+    // $(document).mousemove(function(e){
+    //     let cursorWidth = cursor.width() / 2;
 
-        gsap.to(cursor, {duration: 1.2, left: e.pageX - cursor.width() * 0.5, top: e.pageY - cursor.height() * 0.5, ease: "back.out"});
+    //     gsap.to(cursor, {duration: 1.2, left: e.pageX - cursor.width() * 0.5, top: e.pageY - cursor.height() * 0.5, ease: "back.out"});
 
-    });
+    // });
 
 
 
-    $('.click_to_webpage').mouseenter(function(){
-        gsap.to(cursor, {duration: .3, opacity:1});
-    }).mouseleave(function(){
-        gsap.to(cursor, {duration: .3, opacity:0});
-    })
+    // $('.click_to_webpage').mouseenter(function(){
+    //     gsap.to(cursor, {duration: .3, opacity:1});
+    // }).mouseleave(function(){
+    //     gsap.to(cursor, {duration: .3, opacity:0});
+    // })
+    //--------------moving button cursor setting end-------------------
 
 
     /* scroll event section */
@@ -94,6 +96,10 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
     /*  slide,click event section */
+
+    // var card = document.querySelector('.card');
+    // card.addEventListener( 'mouseover', function() {
+    // card.classList.toggle('is-flipped');});
 
 
     var menu = ['Slide 1', 'Slide 2', 'Slide 3']
