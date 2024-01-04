@@ -364,6 +364,18 @@ html, body {
     opacity: 0;
 }
 
+.gradation_outbox .big .goals .goa{
+    position: relative;
+
+}
+
+.gradation_outbox .big .goals .goa .star{
+    position: absolute;
+    left: 245px;
+    top: 50px;
+
+}
+
 .gradation_outbox .big .flexible{
     padding-top: 70px;
     display: flex;
